@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+   int num, reversed = 0;
+   
+   printf("Enter a number: ");
+   scanf("%d", &num);
+
+   // Loop through each digit and build up the reversed number
+   for (; num != 0; num /= 10) {
+      reversed = reversed * 10 + (num % 10);
+   }
+
+   printf("Reverse of the number: %d", reversed);
+
+   return 0;
+}
